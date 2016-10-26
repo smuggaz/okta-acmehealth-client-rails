@@ -1,0 +1,16 @@
+defaults: &defaults
+  audience: https://example.oktapreview.com
+  client_id: 8p10aJwClXD61oFx3SNT
+  client_secret: client_secret_here
+  scope: openid profile email
+  grant_type: authorization_code
+  redirect_uri: http://localhost:8080/callback
+  idp: facebook_google_linkedin_idp
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
